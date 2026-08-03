@@ -5,6 +5,13 @@ serviceAccountKey.json
 .env.production
 
 # Firebase cache
-.agents
 .firebase/
-.claude
+
+# AI / editor / tooling folders
+.claude/
+.agents/
+.vscode/
+.idea/
+
+# macOS junk
+.DS_Store
