@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Rustic Rise</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Rustic Rise</div>
+    <div id="user-navbar"></div>
+  </nav>
+
+  <div class="container" style="max-width: 400px; margin: 40px auto; padding: 20px;">
+    <h2>Create an Account</h2>
+    <form id="registerForm">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" placeholder="First Name" required style="width: 100%; margin-bottom: 12px; padding: 8px;">
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" placeholder="Last Name" required style="width: 100%; margin-bottom: 12px; padding: 8px;">
+
+      <label for="phoneNumber">Phone Number</label>
+      <input type="tel" id="phoneNumber" placeholder="Phone Number" required style="width: 100%; margin-bottom: 12px; padding: 8px;">
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Email" required style="width: 100%; margin-bottom: 12px; padding: 8px;">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" required style="width: 100%; margin-bottom: 15px; padding: 8px;">
+
+      <button type="submit" style="width: 100%; padding: 10px;">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script type="module" src="js/global-auth.js"></script>
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>
+

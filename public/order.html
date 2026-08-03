@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Order</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="logo">Rustic Rise</div>
+  <!-- This is where the user email and logout icon will go -->
+  <div id="user-navbar"></div>
+</nav>
+
+  <h2>Place Your Bread Order</h2>
+
+  <form id="orderForm">
+    <label>Bread Type</label>
+    <select id="breadType">
+      <option value="Select" selected>Select a Product</option>
+      <option value="Sourdough">Sourdough</option>
+      <option value="Focaccia">Focaccia</option>
+      <option value="Rye">Rye</option>
+    </select>
+
+    <label>Quantity</label>
+    <input type="number" id="quantity" min="1" required>
+
+    <label>Pickup Date</label>
+    <input type="date" id="pickupDate" required>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <script type="module" src="js/global-auth.js"></script>
+  <script type="module" src="js/order.js"></script>
+</body>
+</html>

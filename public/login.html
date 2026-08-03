@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="logo">Rustic Rise</div>
+  <!-- This is where the user email and logout icon will go -->
+  <div id="user-navbar"></div>
+</nav>
+  <h2>Client Login</h2>
+
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <p style="margin-top: 15px;">Don't have an account? <a href="register.html">Register here</a></p>
+
+
+    <!-- Global observer first, then page-specific actions -->
+  <script type="module" src="js/global-auth.js"></script>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
