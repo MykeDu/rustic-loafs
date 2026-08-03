@@ -1,32 +1,38 @@
 
 📁 ## Project Structure
 ```
-public/
-  index.html
-  login.html
-  register.html
-  order.html
-  orders.html
-  admin.html
-  profile.html
-  404.html
+this was the structure sent in chat window a few days ago
 
-  css/
-    styles.css
-    admin.css
+⭐ Full Project Structure (recommended)
 
-  js/
-    firebase-config.js
-    global-auth.js
-    login.js
-    register.js
-    order.js
-    orders.js
-    admin.js
-    profile.js
+sourdough-order-app/
+│
+├── public/                     # Everything Firebase Hosting will serve
+│   ├── index.html              # Redirect or landing page
+│   ├── login.html              # Client login page
+│   ├── order.html              # Client order form
+│   ├── admin.html              # Admin dashboard
+│   │
+│   ├── css/
+│   │   ├── styles.css          # Shared styling
+│   │   └── admin.css           # Admin-specific styling (optional)
+│   │
+│   ├── js/
+│   │   ├── firebase-config.js  # Your Firebase config + initialization
+│   │   ├── auth.js             # Login, logout, auth state handling
+│   │   ├── order.js            # Order form logic + Firestore writes
+│   │   ├── admin.js            # Admin dashboard logic + Firestore reads
+│   │   └── utils.js            # Shared helpers (date formatting, etc.)
+│   │
+│   ├── img/
+│   │   └── logo.png            # Your bakery logo (optional)
+│   │
+│   └── 404.html                # Optional custom error page
+│
+├── firebase.json               # Hosting + rewrite rules
+├── .firebaserc                 # Firebase project alias
+└── README.md                   # Notes for future you
 
-firebase.json
-.firebaserc
 ```
 
 ✨ ## Features
