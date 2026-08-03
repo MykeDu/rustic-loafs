@@ -1,0 +1,10 @@
+# Firebase server keys (never upload)
+serviceAccountKey.json
+*.env
+.env.local
+.env.production
+
+# Firebase cache
+.agents
+.firebase/
+.claude
