@@ -17,10 +17,10 @@ input, select, button {
 /* 1. Navbar Layout Container */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Pushes logo left, user nav right */
+  justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  background-color: #fcf8f2; /* Warm bakery-themed off-white */
+  background-color: #fcf8f2;
   border-bottom: 1px solid #e2d4c9;
   position: sticky;
   top: 0;
@@ -51,15 +51,15 @@ input, select, button {
 .logo {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #6d4c41; /* Rich cocoa brown */
+  color: #6d4c41;
 }
 
-/* 2. User Menu Alignment (Email + Avatar) */
+/* 2. User Menu Alignment */
 .user-menu-container {
   display: flex;
   align-items: center;
   gap: 12px;
-  position: relative; /* Crucial for absolute dropdown positioning */
+  position: relative;
 }
 
 .user-email {
@@ -67,12 +67,12 @@ input, select, button {
   color: #5d4037;
 }
 
-/* 3. Circular Avatar Button */
+/* 3. Avatar Button */
 .avatar-icon {
   width: 40px;
   height: 40px;
-  border-radius: 50%; /* Turns the square button into a circle */
-  background-color: #8d6e63; /* Warm sourdough-brown */
+  border-radius: 50%;
+  background-color: #8d6e63;
   color: #ffffff;
   border: none;
   font-weight: bold;
@@ -87,70 +87,78 @@ input, select, button {
 
 .avatar-icon:hover {
   background-color: #6d4c41;
-  transform: scale(1.05); /* Slight pop-out effect */
+  transform: scale(1.05);
 }
 
 /* 4. Dropdown Menu Card */
 .logout-dropdown {
   position: absolute;
   right: 0;
-  top: 48px; /* Appears perfectly under the circular icon */
+  top: 48px;
   background-color: #ffffff;
   border: 1px solid #e2d4c9;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  padding: 8px;
+  padding: 0;
   min-width: 120px;
   z-index: 101;
+
+  /* ⭐ FIX: prevents hover backgrounds from overflowing */
+  overflow: hidden;
 }
 
-/* 5. Logout Button */
-#actionLogoutBtn {
-  width: 100%;
-  background-color: #d32f2f; /* Error/alert red */
-  color: #ffffff;
-  border: none;
+.logout-dropdown a,
+.logout-dropdown button {
+  color: #5d4037 !important;
+  display: block;
   padding: 8px 12px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 4px;
+  text-align: left;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.2s;
+}
+
+.logout-dropdown a:hover,
+.logout-dropdown button:hover {
+  background-color: #f5e9dd;
+}
+
+/* 5. Logout Link */
+#actionLogoutBtn {
+  background: none !important;
+  color: #5d4037 !important;
+  padding: 8px 12px !important;
+  border: none !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  cursor: pointer;
 }
 
 #actionLogoutBtn:hover {
-  background-color: #b71c1c;
+  background-color: #f5e9dd !important;
 }
-
 
 /* --- Mobile Responsive Rules --- */
 @media (max-width: 600px) {
-  /* 1. Tighten padding on the navbar to save horizontal space */
   .navbar {
     padding: 8px 16px;
   }
 
-  /* 2. Scale down the logo font size slightly */
   .logo {
     font-size: 1.1rem;
   }
 
-  /* 3. Hide the email text to prevent layout wrapping */
   .user-email {
-    display: none; /* The avatar button is enough on mobile! */
+    display: none;
   }
 
-  /* 4. Tweak the layout spacing of the menu container */
   .user-menu-container {
     gap: 8px;
   }
 
-  /* 5. Adjust dropdown position slightly for tight screen boundaries */
   .logout-dropdown {
     top: 44px;
-    right: -4px; /* Pulls the card slightly left so it doesn't clip off the screen */
+    right: -4px;
   }
 }
-
-
-

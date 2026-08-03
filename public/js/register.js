@@ -19,16 +19,23 @@ registerForm.addEventListener("submit", async (e) => {
     const user = userCredential.user;
 
     // 2. Immediately write the details directly into the "users" collection in Firestore
+    console.log("Creating Firestore user document for:", user.uid);
+
     await setDoc(doc(db, "users", user.uid), {
       firstName: firstName,
       lastName: lastName,
-      phoneNumber: phoneNumber
+      phoneNumber: phoneNumber,
+      admin: false,                     // ⭐ REQUIRED ⭐
+      createdAt: new Date().toISOString()
     });
 
+    console.log("Firestore user document created!");
+    
     console.log("Account and profile document created successfully!");
     alert("Account created successfully!");
   } catch (error) {
     console.error("Registration error:", error);
     alert("Registration failed: " + error.message);
   }
+
 });
