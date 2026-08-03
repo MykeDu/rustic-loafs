@@ -1,20 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Rustic Rise Sourdough</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <nav class="navbar">
-  <div class="logo">Rustic Rise</div>
-  <!-- This is where the user email and logout icon will go -->
-  <div id="user-navbar"></div>
-</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Rustic Rise Sourdough</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Rustic Rise</div>
 
-  <h1>Welcome to The Rustic Loaf</h1>
-  <p>Fresh artisan bread made in Sparta, TN.</p>
-  <a href="login.html">Client Login</a>
-</body>
+      <!-- Right side of navbar -->
+      <div class="right-nav">
+        <a id="loginLink" class="nav-link" href="login.html">Login</a>
+
+        <!-- JS will inject avatar/email here -->
+        <div id="user-navbar"></div>
+      </div>
+    </nav>
+
+    <h1>Welcome to The Rustic Loaf</h1>
+    <p>Fresh artisan bread made in Sparta, TN.</p>
+
+    <script type="module" src="js/global-auth.js"></script>
+  </body>
 </html>

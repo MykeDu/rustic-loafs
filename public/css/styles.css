@@ -27,6 +27,27 @@ input, select, button {
   z-index: 100;
 }
 
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  color: #5d4037;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+#loginLink {
+  border: 3px solid red !important;
+}
+
 .logo {
   font-size: 1.25rem;
   font-weight: bold;
